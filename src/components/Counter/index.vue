@@ -1,6 +1,6 @@
 <template>
   <div @click="toggleClick">
-    <span class="count">{{ count }}</span>
+    <span class="count">Times clicked: {{ count }}</span>
     <button @click="increment" class="button">Increment</button>
 
   </div>

@@ -29,18 +29,18 @@ describe('test count', () => {
   // Creates a test closure(闭包)
   it('step 1: console.log(vm) ', () => {
     // 你可以通过 `wrapper.vm` 访问实际的 Vue 实例
-    const vm = wrapper.vm
-    console.log(vm)
+    // const vm = wrapper.vm
+    // console.log(vm)
 
     // 在控制台将其记录下来即可深度审阅包裹器
     // 我们对 Vue Test Utils 的探索也由此开始
-    console.log(wrapper)
+    // console.log(wrapper)
   })
 
   it('step 2: renders the correct markup ', () => {
     console.log('wrapper is : // ', wrapper.html(), typeof wrapper.html())
 
-    expect(wrapper.html()).toContain('<span class="count">0</span>')
+    expect(wrapper.html()).toContain('<span class="count">Times clicked: 0</span>')
   })
 
   // 也便于检查已存在的元素
