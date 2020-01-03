@@ -20,3 +20,5 @@ test('TextRender', () => {
   // 断言错误信息不再显示了
   expect(wrapper.find('.error').exists()).toBe(false)
 })
+
+// 我们在上一个示例的基础上继续构建，同时引入一个工厂函数 (factory function)使得我们的测试更简洁更易读。这个组件应该
