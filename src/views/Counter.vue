@@ -13,11 +13,6 @@ export default {
   name: 'home',
   components: {
     Counter
-  },
-  mounted () {
-    this.$on('toggleClick', () => {
-      alert(333)
-    })
   }
 }
 </script>

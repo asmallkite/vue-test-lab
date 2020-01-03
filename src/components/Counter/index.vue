@@ -1,5 +1,5 @@
 <template>
-  <div @click="toggleClick">
+  <div>
     <span class="count">Times clicked: {{ count }}</span>
     <button @click="increment" class="button">Increment</button>
 
@@ -17,9 +17,6 @@ export default {
   methods: {
     increment () {
       this.count++
-    },
-    toggleClick () {
-      this.$emit('toggleClick')
     }
   }
 }

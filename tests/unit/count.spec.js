@@ -29,12 +29,12 @@ describe('test count', () => {
   // Creates a test closure(闭包)
   it('step 1: console.log(vm) ', () => {
     // 你可以通过 `wrapper.vm` 访问实际的 Vue 实例
-    // const vm = wrapper.vm
-    // console.log(vm)
+    const vm = wrapper.vm
+    console.log(vm)
 
     // 在控制台将其记录下来即可深度审阅包裹器
     // 我们对 Vue Test Utils 的探索也由此开始
-    // console.log(wrapper)
+    console.log(wrapper)
   })
 
   it('step 2: renders the correct markup ', () => {
@@ -71,12 +71,12 @@ describe('test count', () => {
   it('step 3: another button click should increment the count', () => {
     const shallowWrapper = shallowMount(Counter)
     expect(shallowWrapper.vm.count).toBe(0)
-    const mockFn = jest.fn()
-    shallowWrapper.vm.$on('toggleClick', mockFn)
+    // const mockFn = jest.fn()
+    // shallowWrapper.vm.$on('toggleClick', mockFn)
     const button = shallowWrapper.find('.button')
     button.trigger('click')
     button.trigger('click')
-    expect(mockFn).toBeCalled()
+    // expect(mockFn).toBeCalled()
     expect(shallowWrapper.vm.count).toBe(2)
   })
 })
